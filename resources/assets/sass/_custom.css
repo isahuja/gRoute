@@ -1,0 +1,23 @@
+.centered{
+	position: fixed;
+	top: 20%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transform: -webkit-translate(-50%, -50%);
+	transform: -moz-translate(-50%, -50%);
+	transform: -ms-translate(-50%, -50%);
+	width:700px;
+}
+
+
+.submitsearch{margin-top:25px; width:100%; background:#77d6ab; border-color:#77d6ab;
+
+	&:hover{
+		background:#5dce9b;
+		border-color:#5dce9b;
+	}
+}
+
+@media (max-width:768px){
+	
+}
