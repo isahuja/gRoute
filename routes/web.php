@@ -11,10 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/search', function () {
-    return view('search');
-});
+Route::get('/', function(){return view('welcome');});
+Route::get('/search', function(){return view('search');});
+Route::get('/get-routes', '\App\Http\Controllers\RoutesController@getRoutes');
