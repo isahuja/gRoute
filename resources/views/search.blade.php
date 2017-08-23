@@ -56,7 +56,7 @@
 
 			</div>
 			
-			<div id="mapclone1" style="width:70%; height:400px"></div>
+			<div id="mapclone1" style="width:70%; height:300px"></div>
 
 			<div class="clone-cont-2">	</div>
 			<div class="clone-cont-3">	</div>
@@ -189,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('#mapclone2').add('#mapclone3').remove();
+		$('.clone-cont-2').add('.clone-cont-3').remove();
 	});
 
 	$('#alternate_routes').click(function()
