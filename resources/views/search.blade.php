@@ -16,11 +16,7 @@
 
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMAYZj4GFedFRQ3AgUymM9yjXmmrk6w0&libraries=places"></script>
 	<link rel="stylesheet" href="css/app.css?v=1">
-	<!-- <script src="js/app.js?v=1"></script> -->
-	<script
-  src="https://code.jquery.com/jquery-2.2.4.js"
-  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-  crossorigin="anonymous"></script>
+	<script src="js/app.js?v=1"></script>
 	<title>Search</title>
 </head>
 <body>
@@ -60,7 +56,7 @@
 
 			</div>
 			
-			<div id="mapclone1" style="width:70%; height:300px"></div>
+			<div id="mapclone1" style="width:70%; height:400px"></div>
 
 			<div class="clone-cont-2">	</div>
 			<div class="clone-cont-3">	</div>
@@ -193,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('.clone-cont-2').add('.clone-cont-3').remove();
+		$('#mapclone2').add('#mapclone3').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -214,10 +210,11 @@
 				console.log(data);
 				if(data.success == 1)
 				{
-										// first path
+					$('.alernate-div').hide();
+					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');
-					$('.clone-cont-2').append($klon);
+					$('#map-containers').append($klon);
 					var directionsDisplay11 = new google.maps.DirectionsRenderer();
 					var directionsService11 = new google.maps.DirectionsService();
 
@@ -241,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$(".clone-cont-2").prepend("<div class='content-2'><span class='first'>" + data.data[0].origin_name + " </span> - <span class='last'>" + data.data[0].destination_name +"</span></div>")
+							$("#mapclone2").prepend("<div>Travel from " + data.data[0].origin_name + " to " + data.data[0].destination_name +"</div>")
 						}
 						else
 						{
@@ -252,7 +249,7 @@
 					// second path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone3');
-					$('.clone-cont-3').append($klon);
+					$('#map-containers').append($klon);
 					var directionsDisplay22 = new google.maps.DirectionsRenderer();
 					var directionsService22 = new google.maps.DirectionsService();
 
@@ -276,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$(".clone-cont-3").prepend("<div class='content-3'><span class='first'> " + data.data[1].origin_name + "</span> - <span class='last'>" + data.data[1].destination_name +"</span></div>")
+							$("#mapclone3").prepend("<div>Travel from " + data.data[1].origin_name + " to " + data.data[1].destination_name +"</div>")
 						}
 						else
 						{
