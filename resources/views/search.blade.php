@@ -17,6 +17,10 @@
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrMAYZj4GFedFRQ3AgUymM9yjXmmrk6w0&libraries=places"></script>
 	<link rel="stylesheet" href="css/app.css?v=1">
 	<!-- <script src="js/app.js?v=1"></script> -->
+	<script
+  src="https://code.jquery.com/jquery-2.2.4.js"
+  integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+  crossorigin="anonymous"></script>
 	<title>Search</title>
 </head>
 <body>
