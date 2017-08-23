@@ -57,6 +57,10 @@
 			</div>
 			
 			<div id="mapclone1" style="width:70%; height:400px"></div>
+
+			<div class="clone-cont-2">	</div>
+			<div class="clone-cont-3">	</div>
+
 		</div>
 	</center>
 	<input type="hidden" id="base_url" value="{{ URL::to('/') }}"></input>
@@ -210,7 +214,7 @@
 					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');
-					$('#map-containers').append($klon);
+					$('.clone-cont-2').append($klon);
 					var directionsDisplay11 = new google.maps.DirectionsRenderer();
 					var directionsService11 = new google.maps.DirectionsService();
 
@@ -234,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#mapclone2").append("<div>Travel from " + data.data[0].origin_name + " to " + data.data[0].destination_name +"</div>")
+							$(".clone-cont-2").prepend("<div>Travel from " + data.data[0].origin_name + " to " + data.data[0].destination_name +"</div>")
 						}
 						else
 						{
@@ -245,7 +249,7 @@
 					// second path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone3');
-					$('#map-containers').append($klon);
+					$('.clone-cont-3').append($klon);
 					var directionsDisplay22 = new google.maps.DirectionsRenderer();
 					var directionsService22 = new google.maps.DirectionsService();
 
@@ -269,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#mapclone3").append("<div>Travel from " + data.data[1].origin_name + " to " + data.data[1].destination_name +"</div>")
+							$(".clone-cont-3").prepend("<div>Travel from " + data.data[1].origin_name + " to " + data.data[1].destination_name +"</div>")
 						}
 						else
 						{
