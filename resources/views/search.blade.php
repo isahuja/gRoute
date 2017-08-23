@@ -238,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$(".clone-cont-2").prepend("<div class='content-2'><span class='first'>" + data.data[0].origin_name + " </span> to  <span class='last'>" + data.data[0].destination_name +"</span></div>")
+							$(".clone-cont-2").prepend("<div class='content-2'><span class='first'>" + data.data[0].origin_name + " </span> - <span class='last'>" + data.data[0].destination_name +"</span></div>")
 						}
 						else
 						{
