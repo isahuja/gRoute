@@ -189,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('.clone-cont-2').add('.clone-cont-3').remove();
+		$('.clone-cont-2').add('.clone-cont-2').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -214,7 +214,7 @@
 					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');
-					$('.clone-cont-2').append($klon);
+					$('#map-containers').append($klon);
 					var directionsDisplay11 = new google.maps.DirectionsRenderer();
 					var directionsService11 = new google.maps.DirectionsService();
 
@@ -249,7 +249,7 @@
 					// second path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone3');
-					$('.clone-cont-3').append($klon);
+					$('#map-containers').append($klon);
 					var directionsDisplay22 = new google.maps.DirectionsRenderer();
 					var directionsService22 = new google.maps.DirectionsService();
 
