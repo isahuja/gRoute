@@ -56,7 +56,7 @@
 
 			</div>
 			
-			<div id="mapclone1" style="width:70%; height:3	00px"></div>
+			<div id="mapclone1" style="width:70%; height:300px"></div>
 
 			<div id="clone-cont-2">	</div>
 			<div id="clone-cont-3">	</div>
@@ -189,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		// $('.clone-cont-2').add('.clone-cont-2').remove();
+		$('.mapclone2').add('.mapclone3').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -238,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#mapclone2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
+							$("#clone-cont-2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
 						}
 						else
 						{
@@ -273,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#mapclone3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
+							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
 						}
 						else
 						{
