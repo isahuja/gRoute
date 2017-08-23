@@ -189,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('#mapclone2').add('#mapclone3').remove();
+		$('.clone-cont-2').add('.clone-cont-2').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -210,7 +210,7 @@
 				console.log(data);
 				if(data.success == 1)
 				{
-					$('.alernate-div').hide();
+					
 					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');
@@ -238,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#mapclone2").prepend("<div>Travel from " + data.data[0].origin_name + " to " + data.data[0].destination_name +"</div>")
+							$("#mapclone2").prepend("<div><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
 						}
 						else
 						{
@@ -273,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#mapclone3").prepend("<div>Travel from " + data.data[1].origin_name + " to " + data.data[1].destination_name +"</div>")
+							$("#mapclone3").prepend("<div><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
 						}
 						else
 						{
