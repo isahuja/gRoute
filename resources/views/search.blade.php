@@ -185,6 +185,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
+		$('#mapclone2').add('#mapclone3').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -205,6 +206,7 @@
 				console.log(data);
 				if(data.success == 1)
 				{
+					$('.alernate-div').hide();
 					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');

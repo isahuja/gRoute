@@ -33,6 +33,8 @@ body{
 	}
 }
 
+#mapclone1{display: none;}
+
 /*#alternate_routes{display: none;}*/
 .alernate-div{display: none; overflow: hidden; margin-top:30px;}
 

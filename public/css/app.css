@@ -8393,6 +8393,10 @@ body {
   border-color: #5dce9b;
 }
 
+#mapclone1 {
+  display: none;
+}
+
 /*#alternate_routes{display: none;}*/
 
 .alernate-div {
