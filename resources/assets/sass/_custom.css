@@ -54,3 +54,7 @@ body{
 }
 
 html, body{height:100%;}
+
+.content-2, .content-3{color:#fff; padding:10px;}
+
+.first, .last{padding:10px; display: inline-block; background: #5dce9b;}
