@@ -262,6 +262,8 @@
 					var map2 = new google.maps.Map(document.getElementById('mapclone3'),mapProp22);
 					directionsDisplay22.setMap(map2);
 
+					// $('body').height($(document).height());
+
 					var request22 = {
 										origin: new google.maps.LatLng(data.data[1].origin_lat.substring(0,7), data.data[1].origin_lng.substring(0,7)),
 										destination: new google.maps.LatLng(data.data[1].destination_lat.substring(0,7), data.data[1].destination_lng.substring(0,7)),
