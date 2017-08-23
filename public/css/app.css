@@ -8351,27 +8351,68 @@ button.close {
 }
 
 .centered {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transform: -webkit-translate(-50%, -50%);
-          transform: -webkit-translate(-50%, -50%);
-  transform: -moz-translate(-50%, -50%);
-  transform: -ms-translate(-50%, -50%);
+  position: relative;
+  margin: 70px auto 0;
   width: 700px;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
-.submitsearch {
-  margin-top: 25px;
-  width: 100%;
+.centered input {
+  height: 45px;
+}
+
+.centered label {
+  color: #fff;
+}
+
+body {
+  background: url("http://cdn.pcwallart.com/images/route-66-road-wallpaper-3.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.button-set {
+  padding: 10px;
+  display: inline-block;
+}
+
+#send_data,
+#alternate_routes {
+  margin-top: 28px;
   background: #77d6ab;
   border-color: #77d6ab;
+  color: #fff;
+  -webkit-transition: all 350ms ease 0s;
+  transition: all 350ms ease 0s;
 }
 
-.submitsearch:hover {
+#send_data:hover,
+#alternate_routes:hover {
   background: #5dce9b;
   border-color: #5dce9b;
+}
+
+/*#alternate_routes{display: none;}*/
+
+.alernate-div {
+  display: none;
+  overflow: hidden;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .centered {
+    width: 100%;
+  }
+
+  .centered .col-xs-5,
+  .centered .col-xs-2 {
+    width: 100%;
+  }
+
+  #send_data {
+    width: 100%;
+  }
 }
 

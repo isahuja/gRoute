@@ -25,32 +25,37 @@
 		<div class="centered">
 			<form action="">
 				<div class="form-group col-xs-5">
-					<label for="start_point" class="col-2 col-form-label">Starting Point</label>
+					<label for="start_point" class="col-2 col-form-label">ORIGIN</label>
 					<div class="col-10">
-						<input class="form-control" type="text" value="" id="start_point" placeholder="starting point">
+						<input class="form-control" type="text" value="" id="start_point" >
 					</div>
 				</div>
 
 				<div class="form-group col-xs-5">
-					<label for="end_point" class="col-2 col-form-label">Destination Point</label>
+					<label for="end_point" class="col-2 col-form-label">DESTINATION</label>
 					<div class="col-10">
-						<input class="form-control" type="text" value="" id="end_point" placeholder="destination point">
+						<input class="form-control" type="text" value="" id="end_point" >
 					</div>
 				</div>
 
 				<div class="form-group col-xs-2">
 					<!-- <button id='btt' class="btn btn-primary submitsearch">Submit</button> -->
-					<label id="send_data" class="col-2 col-form-label">Show Route</label>
-					<label id="alternate_routes" class="col-2 col-form-label">Show Alternate Routes</label>
+					<span id="send_data" class="col-2 col-form-label btn button-set">Show Route</span>
+					
 				</div>
 
 			</form>
 		</div>
 	</div>
-	<br><br><br><br><br><br><br><br><br>
+
 	<center>
 		<div id="map-containers">
-			<div id="map" style="width:70%; height:400px"></div>
+			<div id="map" style="width:70%; height:300px"></div>
+			<div class="alernate-div">
+				<span id="alternate_routes" class="col-2 col-form-label btn button-set">Show Alternate Routes</span>
+
+			</div>
+			
 			<div id="mapclone1" style="width:70%; height:400px"></div>
 		</div>
 	</center>
@@ -179,6 +184,7 @@
 	$('#send_data').click(function()
 	{
 		calcRoute();
+		$('.alernate-div').show();
 	});
 
 	$('#alternate_routes').click(function()
