@@ -273,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
+							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span></div>")
 						}
 						else
 						{
