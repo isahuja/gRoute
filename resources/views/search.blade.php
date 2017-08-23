@@ -56,10 +56,10 @@
 
 			</div>
 			
-			<div id="mapclone1" style="width:70%; height:300px"></div>
+			<div id="mapclone1" style="width:70%; height:3	00px"></div>
 
-			<div class="clone-cont-2">	</div>
-			<div class="clone-cont-3">	</div>
+			<div id="clone-cont-2">	</div>
+			<div id="clone-cont-3">	</div>
 
 		</div>
 	</center>
@@ -189,7 +189,7 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('.clone-cont-2').add('.clone-cont-2').remove();
+		// $('.clone-cont-2').add('.clone-cont-2').remove();
 	});
 
 	$('#alternate_routes').click(function()
@@ -214,7 +214,7 @@
 					// first path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone2');
-					$('#map-containers').append($klon);
+					$('#clone-cont-2').append($klon);
 					var directionsDisplay11 = new google.maps.DirectionsRenderer();
 					var directionsService11 = new google.maps.DirectionsService();
 
@@ -249,7 +249,7 @@
 					// second path
 					var clone_div = $("#mapclone1");
 					var $klon = clone_div.clone().prop('id', 'mapclone3');
-					$('#map-containers').append($klon);
+					$('#clone-cont-3').append($klon);
 					var directionsDisplay22 = new google.maps.DirectionsRenderer();
 					var directionsService22 = new google.maps.DirectionsService();
 
