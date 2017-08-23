@@ -122,7 +122,8 @@
 			start_lat = autocomplete1.lat;
 			start_lng = autocomplete1.lng;
 
-			console.log(start_lat + ' ' + start_lng)
+			console.log(start_lat + ' ' + start_lng);
+			console.log($('#start_point').val());
 		});
 	}
 
@@ -190,6 +191,8 @@
 						'start_lng'	: start_lng,
 						'end_lat'	: end_lat,
 						'end_lng'	: end_lng,
+						'start_text'	: $('#start_point').val(),
+						'end_text'		: $('#end_point').val()
 					},
 			success:function(data)
 			{

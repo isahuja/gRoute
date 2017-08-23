@@ -18,13 +18,14 @@ class RoutesController extends Controller
 		$start_lng = Input::get('start_lng');
 		$end_lat = Input::get('end_lat');
 		$end_lng = Input::get('end_lng');
+		$start_text = Input::get('start_text');
+		$end_text = Input::get('end_text');
+
 		$success = 1;
 		$data = '';
 
-		$main_route = MainRoute::where('origin_lat', '=', $start_lat)
-								->where('origin_lng', '=', $start_lng)
-								->where('destination_lat', '=', $end_lat)
-								->where('destination_lng', '=', $end_lng)
+		$main_route = MainRoute::where('origin_name', 'LIKE', '%' . $start_text . '%')
+								->where('destination_name', 'LIKE', '%' . $end_text . '%')
 								->first();
 
 		if($main_route)
