@@ -238,7 +238,7 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#mapclone2").prepend("<div><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
+							$("#mapclone2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
 						}
 						else
 						{
@@ -273,7 +273,7 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#mapclone3").prepend("<div><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
+							$("#mapclone3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span><span class='lastel'> " + data.data[1].destination_name +"</span></div>")
 						}
 						else
 						{
