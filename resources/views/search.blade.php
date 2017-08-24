@@ -189,11 +189,18 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('.mapclone2').add('.mapclone3').remove();
+		$('#mapclone2').remove();
+		$('#mapclone3').remove();
+
+		$('#clone-cont-2').html('');
+		$('#clone-cont-3').html('');
 	});
 
 	$('#alternate_routes').click(function()
 	{
+		if($("#mapclone2").length)
+			return;
+
 		$.ajax({
 			url  : 	base_url + '/get-routes',
 			type : 	"get",
