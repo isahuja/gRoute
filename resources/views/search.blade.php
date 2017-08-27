@@ -246,7 +246,7 @@
 						{
 							directionsDisplay11.setDirections(response11);
 
-							$("#clone-cont-2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span> - <span class='lastel'>" + data.data[0].travel_information + "</span></div>")
+							$("#clone-cont-2").append("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span> - <span class='lastel'>" + data.data[0].travel_information + "</span></div>")
 
 						}
 						else
@@ -285,7 +285,7 @@
 						{
 							directionsDisplay22.setDirections(response22);
 
-							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
+							$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
 						}
 						else
 						{
