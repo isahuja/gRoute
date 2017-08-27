@@ -8444,6 +8444,7 @@ body {
   padding: 30px 0;
   width:70%;
   margin: 0 auto;
+  overflow:hidden;
 }
 #mapclone2, #mapclone3{
   float:left;
