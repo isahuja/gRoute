@@ -154,10 +154,10 @@
 	function myMap()
 	{
 		directionsDisplay = new google.maps.DirectionsRenderer();
-		var chicago = new google.maps.LatLng(41.850033, -87.6500523);
+		var chicago = new google.maps.LatLng(53.349805, -6.260310);
 		var mapProp = {
 						center : chicago,
-						zoom : 5,
+						zoom : 10,
 					};
 
 		var map = new google.maps.Map(document.getElementById("map"),mapProp);
@@ -189,11 +189,18 @@
 	{
 		calcRoute();
 		$('.alernate-div').show();
-		$('.mapclone2').add('.mapclone3').remove();
+		$('#mapclone2').remove();
+		$('#mapclone3').remove();
+
+		$('#clone-cont-2').html('');
+		$('#clone-cont-3').html('');
 	});
 
 	$('#alternate_routes').click(function()
 	{
+		if($("#mapclone2").length)
+			return;
+
 		$.ajax({
 			url  : 	base_url + '/get-routes',
 			type : 	"get",
@@ -238,7 +245,9 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#clone-cont-2").append("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span></div>")
+
+							$("#clone-cont-2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span> - <span class='lastel'>" + data.data[0].travel_information + "</span></div>")
+
 						}
 						else
 						{
@@ -275,7 +284,8 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span></div>")
+
+							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
 						}
 						else
 						{
