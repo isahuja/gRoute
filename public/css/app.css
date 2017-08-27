@@ -8426,17 +8426,27 @@ body {
 .content-3 {
   color: #fff;
   padding: 10px;
+  float:left;
+  width:40%;
+  padding-left:50px;
 }
 
 .firstel,
 .lastel {
   padding: 10px;
-  display: inline-block;
+  display: block;
   background: #5dce9b;
+  width:100%;
 }
 
 #clone-cont-2,
 #clone-cont-3 {
   padding: 30px 0;
+  width:70%;
+  margin: 0 auto;
+}
+#mapclone2, #mapclone3{
+  float:left;
+  width:50%;
 }
 
