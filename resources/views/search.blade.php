@@ -300,7 +300,14 @@
 						{
 							directionsDisplay22.setDirections(response22);
 
-							$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
+							if($('#start_point').val().indexOf("Oaklands") >= 0)
+							{
+								$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span> - <span class='lastel'> <a href='/redline-timetable.pdf'> Get Redline Time Table </a></span></div>");
+							}
+							else
+							{
+								$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>");
+							}
 						}
 						else
 						{
