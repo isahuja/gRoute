@@ -50,7 +50,10 @@
 
 	<center>
 		<div id="map-containers">
-			<div id="map" style="width:70%; height:300px"></div>
+			<div class="clone-cont">
+				<div id="map" style="width:50%; height:300px"></div>
+			</div>
+			
 			<div class="alernate-div">
 				<span id="alternate_routes" class="col-2 col-form-label btn button-set">Show Alternate Routes</span>
 
