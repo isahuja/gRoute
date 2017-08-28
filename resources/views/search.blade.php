@@ -59,7 +59,7 @@
 
 			</div>
 			
-			<div id="mapclone1" style="width:70%; height:300px"></div>
+			<div id="mapclone1" style=" height:300px"></div>
 
 			<div id="clone-cont-2">	</div>
 			<div id="clone-cont-3">	</div>
@@ -248,7 +248,9 @@
 						if(status11 == 'OK')
 						{
 							directionsDisplay11.setDirections(response11);
-							$("#clone-cont-2").prepend("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span> - <span class='lastel'>" + data.data[0].travel_information + "</span></div>")
+
+							$("#clone-cont-2").append("<div class='content-2'><span class='firstel'> " + data.data[0].origin_name + "</span> - <span class='lastel'>" + data.data[0].destination_name +"</span> - <span class='lastel'>" + data.data[0].travel_information + "</span></div>")
+
 						}
 						else
 						{
@@ -285,7 +287,8 @@
 						if(status22 == 'OK')
 						{
 							directionsDisplay22.setDirections(response22);
-							$("#clone-cont-3").prepend("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
+
+							$("#clone-cont-3").append("<div class='content-3'><span class='firstel'>" + data.data[1].origin_name + " </span> - <span class='lastel'> " + data.data[1].destination_name +"</span> - <span class='lastel'>" + data.data[1].travel_information + "</span></div>")
 						}
 						else
 						{
