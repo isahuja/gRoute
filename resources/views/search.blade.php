@@ -51,16 +51,14 @@
 	<center>
 		<div id="map-containers">
 			<div class="clone-cont">
-				<div id="map" style="width:50%; height:300px"></div>
+				<div id="map" style="width:100%; height:300px"></div>
 			</div>
 			
 			<div class="alernate-div">
 				<span id="alternate_routes" class="col-2 col-form-label btn button-set">Show Alternate Routes</span>
-
 			</div>
 			
 			<div id="mapclone1" style=" height:300px"></div>
-
 			<div id="clone-cont-2">	</div>
 			<div id="clone-cont-3">	</div>
 
@@ -174,6 +172,22 @@
 
 	function calcRoute()
 	{
+		$('.clone-cont').addClass('small');
+		myMap();
+		$('.content').remove();
+		if($('#start_point').val().indexOf("78") >= 0)
+		{
+			$(".clone-cont").append("<div class='content'><span class='firstel'>Approx Time 1.09 Hrs</span></div>");
+		}
+		else if ($('#start_point').val().indexOf("Oaklands") >= 0)
+		{
+			$(".clone-cont").append("<div class='content'><span class='firstel'>Approx Time 1.16 Hrs</span></div>");
+		}
+		else
+		{
+			$(".clone-cont").append("<div class='content'><span class='firstel'>No Approx time available</span></div>");
+		}
+
 		var request = {
 							origin: new google.maps.LatLng(start_lat, start_lng),
 							destination: new google.maps.LatLng(end_lat, end_lng),
@@ -273,8 +287,6 @@
 
 					var map2 = new google.maps.Map(document.getElementById('mapclone3'),mapProp22);
 					directionsDisplay22.setMap(map2);
-
-					// $('body').height($(document).height());
 
 					var request22 = {
 										origin: new google.maps.LatLng(data.data[1].origin_lat.substring(0,7), data.data[1].origin_lng.substring(0,7)),
