@@ -76,5 +76,5 @@ body{
 
 .clone-cont {width:70%; overflow:hidden;}
 
- .clone-cont.small{  #map{width:50%; float:left;}}
+ .clone-cont.small{  #map{width:50% !important; float:left;}}
 

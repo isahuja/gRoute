@@ -8470,7 +8470,7 @@ body {
 }
 
 .clone-cont.small #map {
-  width: 50%;
+  width: 50% !important;
   float: left;
 }
 
