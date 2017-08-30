@@ -55,7 +55,7 @@ body{
 
 /*html, body{height:100%;}*/
 
-.content-2, .content-3{color:#fff; padding:10px; float:left; width:50%; padding-left:50%;}
+.content-2, .content-3{color:#fff; padding:10px; float:left; width:50%; padding-left:50px;}
 
 .firstel, .lastel{padding:10px; display: inline-block; background: #5dce9b; width:100%;}
 
@@ -74,5 +74,7 @@ body{
 
 #mapclone2, #mapclone3{width:50%; float:left;}
 
-.clone-cont {width:70%;}
+.clone-cont {width:70%; overflow:hidden;}
+
+ .clone-cont.small{  #map{width:50%; float:left;}}
 
