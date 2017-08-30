@@ -50,7 +50,7 @@
 
 	<center>
 		<div id="map-containers">
-			<div id="map" style="width:70%; height:300px"></div>
+			<div id="map" k></div>
 			<div class="alernate-div">
 				<span id="alternate_routes" class="col-2 col-form-label btn button-set">Show Alternate Routes</span>
 
@@ -187,13 +187,18 @@
 
 	$('#send_data').click(function()
 	{
-		calcRoute();
-		$('.alernate-div').show();
-		$('#mapclone2').remove();
-		$('#mapclone3').remove();
 
-		$('#clone-cont-2').html('');
-		$('#clone-cont-3').html('');
+		if($('#start_point').val() != "" && $('#end_point').val() != ""){
+			calcRoute();
+			$('.alernate-div').show();
+			$('#mapclone2').remove();
+			$('#mapclone3').remove();
+
+			$('#clone-cont-2').html('');
+			$('#clone-cont-3').html('');
+			
+		}
+		
 	});
 
 	$('#alternate_routes').click(function()
