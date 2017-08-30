@@ -8448,9 +8448,15 @@ body {
   font-size: 14px;
 }
 
-.clone-cont{overflow: hidden; width:70%; margin:0 auto;} 
+#clone-cont-2,
+#clone-cont-3 {
+  width: 70%;
+  overflow: hidden;
+}
 
-.clone-cont.small #map{width:50% !important; float:left;}
-
-.content{float: left; width:50%; color:#fff; padding-left:50px; font-size:14px;}
+#mapclone2,
+#mapclone3 {
+  width: 50%;
+  float: left;
+}
 
