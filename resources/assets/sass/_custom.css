@@ -68,3 +68,9 @@ body{
 	font-size:14px;
 }
 
+#clone-cont-2, #clone-cont-3{width: 70%;
+    overflow: hidden;
+}
+
+#mapclone2, #mapclone3{width:50%; float:left;}
+
